@@ -1,4 +1,3 @@
-import notificationsData from '../../../../notifications.json';
 import { getAllNotificationsByUser, normalized } from './notifications';
 
 
