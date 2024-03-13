@@ -12,6 +12,19 @@ import { shallow, mount } from "enzyme";
 import { StyleSheetTestUtils } from "aphrodite";
 import { AppContext, user, logOut } from "./AppContext";
 
+import { mapStateToProps } from './App'; // Importing mapStateToProps function from App.js
+
+describe('mapStateToProps', () => {
+  it('returns the correct object when user is logged in', () => {
+    const state = {
+      uiReducer: {
+        isUserLoggedIn: true
+      }
+    };
+    const props = mapStateToProps(state);
+    expect(props.isLoggedIn).toBe(true);
+  });
+
 beforeEach(() => {
   StyleSheetTestUtils.suppressStyleInjection();
 });
@@ -166,4 +179,5 @@ describe("markNotificationAsRead works as intended", () => {
 
     wrapper.unmount();
   });
+});
 });
