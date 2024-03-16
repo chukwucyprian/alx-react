@@ -4,7 +4,7 @@ import { logout } from "../actions/uiActionCreators";
 import PropTypes from "prop-types";
 import { StyleSheet, css } from "aphrodite";
 import AppContext from "../App/AppContext";
-import holberton_logo from "../assets/holberton_logo.jpg";
+import holberton_logo from "../assets/holberton-logo.jpg";
 
 export class Header extends Component {
   constructor(props) {
